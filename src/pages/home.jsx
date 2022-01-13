@@ -32,8 +32,7 @@ const spinnerStyle = {
       setLoading(true);
       setTimeout(async () => {
         try {
-          const response = await fetchPokemon(query);
-          const results = await response.json();
+          const results = await fetchPokemon(query);
           console.log(results);
           setPokemon(results);
           setLoading(false);
@@ -45,7 +44,7 @@ const spinnerStyle = {
         }
       }, 1500);
     }
-  
+
     return (
       <div>
         {error ? (<Alert variant='danger'>{errorMsg}</Alert>): null}
